@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+		*{
+			border: none;
+			padding: 0px;
+			margin: 0px;
+		}
+		::-webkit-scrollbar{
+			display:none;
+		}
+		.newList li{
+			width: 100%;
+			height: 50px;
+		}
+		.nesHead{
+			height: 44px;
+			margin-right: 20px;
+			line-height: 44px;
+			border-radius: 50%;
+			margin-left: 15px;
+			float: right;
+		}
+		.news{
+			display: block;
+			width: auto;
+			height: auto;
+			background: #2683f5;
+			padding: 10px 20px;
+			margin: 4px;
+			line-height: 20px;
+			font-size: 14px;
+			border-radius: 10px;
+			margin-left: 30px;
+			position: relative;
+			float: right;
+			color: white;
+		}
+		.answerHead{
+			height: 44px;
+			line-height: 44px;
+			border-radius: 50%;
+			margin-left: 15px;
+			float: left;
+		}
+		.answers{
+			width: auto;
+			height: 30px;
+			background: #eeeeee;
+			padding: 5px 20px;
+			margin: 4px;
+			line-height: 30px;
+			font-size: 14px;
+			border-radius: 10px;
+			margin-left: 10px;
+			position: relative;
+			float: left;
+		}
+
+		.userList li{
+			padding: 5px 10px;
+		}
+	</style>
+	<body>
+		<input type="hidden" value="" id="isLogin">
+		<div id="msg" style="display:none;width: 1200px; height:600px;margin: auto;margin-top: 50px;background-color: #0a8ddf">
+			<div style="float:left;width:18%;padding:10px;height:580px;background-color: #f0ad4e">
+				<div style="text-align: center;font-size: 24px;margin-bottom: 10px">陈立直播间</div>
+				<div style="height: 200px;background-color: #b65611">
+					<img id="img" src="" style="width: 215.99px;height: 200px">
+				</div>
+			</div>
+			<div style="float:left;width:63%;padding:10px;height:580px;background-color: #00aa00">
+				<div style="padding-bottom:15px;height: 465px;background-color: #8bc34a;overflow: auto;">
+					<ul id="newList" class="newList" style="list-style: none;padding: 15px 0px;">
+						<!--<li>
+							<div class="nesHead">
+								陈立
+							</div>
+							<div class="news">
+								是是是
+							</div>
+						</li>
+						<li>
+							<div class="nesHead">
+								陈立
+							</div>
+							<div class="news">
+								是是是
+							</div>
+						</li>
+						<li>
+							<div class="nesHead">
+								陈立
+							</div>
+							<div class="news">
+								是是是
+							</div>
+						</li>
+						<li>
+							<div class="nesHead">
+								陈立
+							</div>
+							<div class="news">
+								是是是
+							</div>
+						</li>
+						<li>
+							<div class="answerHead">
+								用户一
+							</div>
+							<div class="answers">
+								你好
+							</div>
+						</li>
+						<li>
+							<div class="nesHead">
+								陈立
+							</div>
+							<div class="news">
+								是是是
+							</div>
+						</li>
+						<li>
+							<div class="nesHead">
+								陈立
+							</div>
+							<div class="news">
+								是是是
+							</div>
+						</li>
+						<li>
+							<div class="nesHead">
+								陈立
+							</div>
+							<div class="news">
+								是是是
+							</div>
+						</li>
+						<li>
+							<div class="nesHead">
+								陈立
+							</div>
+							<div class="news">
+								是是是
+							</div>
+						</li>
+						<li>
+							<div class="answerHead">
+								用户一
+							</div>
+							<div class="answers">
+								你好
+							</div>
+						</li>
+						<li>
+							<div class="nesHead">
+								陈立
+							</div>
+							<div class="news">
+								是是是
+							</div>
+						</li>
+						<li>
+							<div class="nesHead">
+								陈立
+							</div>
+							<div class="news">
+								是是是
+							</div>
+						</li>
+						<li>
+							<div class="nesHead">
+								陈立
+							</div>
+							<div class="news">
+								是是是
+							</div>
+						</li>
+						<li>
+							<div class="nesHead">
+								陈立
+							</div>
+							<div class="news">
+								是是是
+							</div>
+						</li>
+						<li>
+							<div class="answerHead">
+								用户一
+							</div>
+							<div class="answers">
+								你好
+							</div>
+						</li>
+						<li>
+							<div class="nesHead">
+								陈立
+							</div>
+							<div class="news">
+								是是是
+							</div>
+						</li>
+						<li>
+							<div class="nesHead">
+								陈立
+							</div>
+							<div class="news">
+								是是是
+							</div>
+						</li>
+						<li>
+							<div class="nesHead">
+								陈立
+							</div>
+							<div class="news">
+								是是是
+							</div>
+						</li>
+						<li>
+							<div class="nesHead">
+								陈立
+							</div>
+							<div class="news">
+								是是是
+							</div>
+						</li>
+						<li>
+							<div class="answerHead">
+								用户一
+							</div>
+							<div class="answers">
+								你好
+							</div>
+						</li>-->
+					</ul>
+				</div>
+				<div style="height: 100px;background-color: #f96765">
+					<textarea name="" id="content" style="outline: none;font-size:18px;padding:10px;border:none;height: 80px;width:97%;resize: none;"></textarea>
+					<span id="send" onclick="send()" style="cursor:pointer;position: relative;top: -30px;right: -700px;padding:3px 10px;background-color: #8B6914;border: 1px solid #CDD8E3">发送</span>
+				</div>
+			</div>
+			<div style="float:right;width:14%;padding:10px;height:580px;background-color: #b65611;overflow: auto;">
+				<ul class="userList" id="userList">
+
+				</ul>
+			</div>
+		</div>
+		<div style="text-align: center;margin-top: 10%" id="setName">
+			<div style="margin-bottom: 10%;font-size: 20px;">欢迎来到陈立直播间</div>
+			<input type="name" style="width: 400px;padding: 10px;font-size:18px;border: 1px solid #F0C49B" id="name" value="">
+			<input id="button" type="button" onclick="send_name()" style="padding: 10px 20px;font-size: 17px;background-color: #f96765" value="进入">
+		</div>
+		<!--
+		<canvas id="output" style="display: block;"></canvas>-->
+	</body>
+</html>
+<script>
+	var socket = new WebSocket('ws://118.89.52.65:9502');
+
+    socket.onopen = function (event) {
+        console.log('连接服务器成功！');
+	}
+
+    socket.onclose = function (event) {
+        console.log('关闭服务器成功！');
+    }
+
+    socket.onerror = function (evt,e) {
+        console.log("错误：" + evt.data);
+    }
+
+    socket.onmessage = function (evt) {
+        var data = JSON.parse(evt.data);
+        var str = '';
+        if(data.type == 'user'){
+			var userList = data.list.fd;
+			// 在线用户列表
+            for(var i in userList) {
+                str += '<li style="cursor: pointer" data-fd="'+userList[i]['id']+'">'+userList[i]['name']+'</li>';
+            }
+            document.getElementById('userList').innerHTML = str;
+		}else if(data.type == 'message'){
+            var str = '';
+            if(data.myfd == data.fd){
+            	str+='<li>'+
+                '<div class="nesHead">'+data.name+'</div>'+
+                '<div class="news">'+data.data+'</div>'+
+                '</li>';
+			}else{
+                str = '<li><div class="answerHead">'+data.name+'</div>\
+                    <div class="answers">'+data.data+'</div></li>';
+			}
+
+            document.getElementById("newList").innerHTML +=str;
+
+            //$('.RightCont').scrollTop($('.RightCont')[0].scrollHeight );
+		}else if(data.type == 'video'){
+            document.getElementById("img").src = data.data;
+		}
+
+        //msg.innerHTML +=evt.data + '<br>';
+        //console.log("从服务器获取到的数据："+evt.data);
+    }
+
+    // 发送 数据
+    function send(){
+        var message = document.getElementById('content').value;
+        if(message == ''){
+            alert('不能为空');
+        }else{
+            document.getElementById('content').value = '';
+            socket.send(JSON.stringify({
+                data:message,
+                type:'message'
+            }));
+        }
+
+    }
+
+    function send_name() {
+        var name = document.getElementById('name').value;
+		if (socket.readyState===1) {
+			socket.send(JSON.stringify({
+				data:"#name#"+name,
+				type:'setName'
+			}));
+        }
+
+        //var myTitle = document.getElementById("myTitle");
+        //myTitle.innerHTML = "即时聊天工具-"+text;
+        alert("设置成功！");
+        document.getElementById("msg").style.display = "block";
+        document.getElementById('setName').style.display = "none";
+        document.getElementById('isLogin').value = 1;
+    }
+
+    var isLogin = document.getElementById('isLogin').value;
+
+    if(isLogin == ''){
+        document.getElementById("msg").style.display = "none";
+        document.getElementById('setName').style.display = "block";
+    }
+
+
+
+	/*function success(stream){
+		video.src = window.URL.createObjectURL(stream);
+	}*/
+	
+	/*function draw(){
+		
+		back.width = 200;
+		back.height = 215.99;
+
+		backcontext.drawImage(video,0,0,back.width,back.height);
+		
+		var str = back.toDataURL('image/jpeg',0.4);
+
+
+        if (socket.readyState===1) {
+            socket.send(JSON.stringify({
+                data:str,
+                type:'video'
+            }));
+        }
+		
+		setTimeout(draw,80);
+	}*/
+	
+	//draw();
+
+
+</script>
